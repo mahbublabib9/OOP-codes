@@ -1,0 +1,201 @@
+TASK:1 (user input)
+
+#include<iostream>
+using namespace std;
+
+class Rectangle{
+   public:
+       double height, width, length;
+       Rectangle(){
+           height = 0;
+           width = 0;
+           length = 0;
+}
+       Rectangle(double h, double w, double l){
+           height = h;
+           width = w;
+           length = l;
+}
+       double area(){
+           return length * width;
+}
+       double volume(){
+          return height * width * length;
+  }
+};
+int main(){
+    int height, width, length;
+    cout << "Enter height, width and length of reclangle: ";
+    cin >> height >> width >> length;
+    Rectangle r1;
+    r1.height = height;
+    r1.width = width;
+    r1.length = length;
+    cout << "Area is: " << r1.area() << endl;
+    cout << "Volume is: " << r1.volume() << endl;
+    return  0;
+}
+
+
+
+TASK:1 (default constructor)
+
+#include<iostream>
+using namespace std;
+
+class Rectangle{
+   public:
+       double height, width, length;
+       Rectangle(){
+          height = 0;
+          width = 0;
+          length = 0;
+}
+       Rectangle(double h, double w, double l){
+          height = h;
+          width = w;
+          length = l;
+}
+      double area(){
+          return length * width;
+}
+      double volume(){
+          return height * width * length;
+        }
+};
+int main(){
+    Rectangle r1;   
+    cout << "Area is: " << r1.area() << endl;
+    cout << "Volume is: " << r1.volume() << endl;
+    return  0;
+}
+
+
+TASK:1 (parameterized constructor)
+
+#include<iostream>
+using namespace std;
+
+class Rectangle{
+   public:
+      double height, width, length;
+      Rectangle(){
+         height = 0;
+         width = 0;
+         length = 0;
+}
+      Rectangle(double h, double w, double l){
+         height = h;
+         width = w;
+         length = l;
+}
+      double area(){
+         return length * width;
+}
+      double volume(){
+         return height * width * length;
+        }
+};
+int main(){ 
+    Rectangle r1(4 , 6 , 12);    
+    cout << "Area is: " << r1.area() << endl;
+    cout << "Volume is: " << r1.volume() << endl;
+    return  0;
+}
+
+
+
+
+TASK:2
+
+#include<iostream>
+using namespace std;
+
+class Employee{
+   private:
+      string name;
+      double salary;
+   public:
+      void setName(string n){
+      name = n;
+}
+      void setSalary(double s){
+      salary = s;
+}
+   string getName(){
+      return name;
+}
+   double getSalary(){
+      return salary;
+}
+   double getYearlySalary(){
+      return salary * 12;
+  }
+};
+int main(){
+   Employee e1;
+   e1.setName("Mahbub");
+   e1.setSalary(16000);
+   cout << "Employee name is: " << e1.getName() << endl;
+   cout << "Yealry salary is: " << e1.getYearlySalary() << endl;
+   return  0;
+}
+
+
+
+TASK:3
+
+#include<iostream>
+using namespace std;
+
+class Student{
+  public:
+      string name;
+      long long int id;
+      string course;
+      char section;
+
+   Student(){
+      name = "Md Mahbubul Alam";
+      id = 42230200842;
+      course = "ECSE";
+      section = 'D';
+}
+};
+int main(){
+  Student s1;
+    cout << "Student name: " << s1.name << endl;
+    cout << "Student id:  " << s1.id << endl;
+    cout << "Student course:  " << s1.course << endl;
+    cout << "Student section:  " << s1.section << endl;
+    return  0;
+}
+
+
+TASK:4
+
+#include<iostream>
+using namespace std;
+
+class Student{
+  public:
+      string name;
+      long long int id;
+      string course;
+      char section;
+
+  Student(string name, long long int id, string course, char section){
+      this -> name = name;
+      this -> id = id;
+      this -> course = course;
+      this -> section = section;
+}
+};
+int main(){
+   Student s1("Md Mahbubul Alam", 42230200842, "ECSE", 'D');
+   cout << "Student name: " << s1.name << endl;
+   cout << "Student id:  " << s1.id << endl;
+   cout << "Student course:  " << s1.course << endl;
+   cout << "Student section:  " << s1.section << endl;
+   return  0;
+}

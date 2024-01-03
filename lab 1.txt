@@ -1,0 +1,71 @@
+Task 1:-
+
+#include<iostream>
+using namespace std;
+
+class Calculator{
+  private:
+	    float rate1, rate2, result;
+	    char math;
+  public:
+            Calculator(){
+            cout << "Calculator is ready!" << endl;
+}
+            float calculate(int r1, int r2, char m){
+            rate1 = r1;
+            rate2 = r2;
+            math = m;
+
+            if(math == '+'){
+                result = r1 + r2;
+            } else if(math == '-'){
+                result = r1 - r2;
+            } else if(math == '*'){
+                result = r1 * r2;
+            } else if(math == '/'){
+                result = r1 / r2;
+            }
+            return result;
+}
+            void show Calculation(){
+            cout << rate1 << " " << math << " " << rate2 << " = " << result << endl;
+}
+};
+
+------------------------------------------
+
+Task 2:-
+
+#include<iostream>
+using namespace std;
+
+class Shape{
+  private:
+           float rate1, rate2;
+           string home;
+
+  public:
+           Shape(string h, float r1, float r2){
+           home =  h;
+           rate1 = r1;
+           rate2 = r2;
+}
+           void area(){
+           float area;
+
+            if(home == "Triangle"){
+            area = (r1 * r2) / 2;
+           } else if(home == "Square"){
+                area = r1 * r2;
+           } else if(home == "Rhombus"){
+                area = (r1 * r2) / 2;
+           } else if(homee == "Rectangle"){
+                area = r1 * r2;
+           } else{
+                cout << "Area: Shape" << endl;
+                return;
+           }
+            cout << "Area: " << area << endl;
+}
+
+};
